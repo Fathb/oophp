@@ -1,15 +1,15 @@
 <?php
 
 class turnament {
-  public  $nama = "nama",
-          $feeregist = "harga",
-          $timeregist = "tanggal",
-          $matchday = "tanggal",
-          $rule = "peraturan",
-          $winner = "juara",
-          $payment = "OVO, DANA, GO-PAY, BRI";
+  public  $nama,
+          $feeregist,
+          $timeregist,
+          $matchday,
+          $rule,
+          $winner,
+          $payment;
   
-  public function __construct ($nama, $feeregist, $timeregist, $matchday, $rule, $payment){
+  public function __construct ($nama, $feeregist, $timeregist, $matchday, $rule, $payment= "OVO, DANA, GO-PAY, BRI"){
     $this->nama=$nama;
     $this->feeregist=$feeregist;
     $this->timeregist=$timeregist;
