@@ -69,6 +69,8 @@ class cetakinfotour {
   }
 }
 
+
+//cetak
 $MCML = new MC ("MAGIC CHESS TOURNEY", 15000, "21-29 juni 2020", "30-6-2020", "1-3 juli 2020", "BO4 ke babak selanjutnya", "lemon");
       
 $ML = new ML("MOBILE LEGENDS TOURNEY",40000,"21-29 juni 2020", "30-60-2020", "3-5 juli 2020", "BO1, semifinala dan final BO3", "RRQ");
