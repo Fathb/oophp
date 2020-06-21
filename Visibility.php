@@ -1,4 +1,3 @@
-
 <?php
 class turnament {
   public  $nama;
@@ -8,9 +7,10 @@ class turnament {
           $matchday,
           $rule,
           $payment;
+  protected $disc;
           
   
-  public function __construct ($nama = "nama", $feeregist = "harga", $timeregist = "tanggal", $TM = "tanggal", $matchday = "tanggal", $rule = "peraturan", $payment= "OVO, DANA, GO-PAY, BRI"){
+  public function __construct ($nama = "nama", $feeregist = "harga", $timeregist = "tanggal", $TM = "tanggal", $matchday = "tanggal", $rule = "peraturan", $payment= "OVO, DANA, GO-PAY, BRI", $disc=0){
     $this->nama=$nama;
     $this->feeregist=$feeregist;
     $this->timeregist=$timeregist;
@@ -18,6 +18,7 @@ class turnament {
     $this->matchday=$matchday;
     $this->rule=$rule;
     $this->payment=$payment;
+    $this->disc=$disc;
   }
   
           
@@ -27,6 +28,12 @@ class turnament {
   public function infotour (){
     $str = "{$this->getlabel()} | {$this->TM} | {$this->matchday} <br> (peraturan : {$this->rule} | {$this->payment}";
     return "$str";
+  }
+  public function setdisc ($disc){
+    $this->disc = $disc;
+  }
+  public function getfee (){
+    return $this->feeregist-$this->disc;
   }
 }
 
@@ -86,5 +93,7 @@ echo $info->cetak ($MCML);
 echo "<hr>";
 echo $info->cetak ($ML);
 echo "<hr>";
+$MCML->setdisc(1000);
+echo $MCML->getfee();
 
 ?>
