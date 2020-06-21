@@ -1,9 +1,9 @@
 
 <?php
 class turnament {
-  public  $nama,
-          $feeregist,
-          $timeregist,
+  public  $nama;
+  private $feeregist;
+  public  $timeregist,
           $TM,
           $matchday,
           $rule,
